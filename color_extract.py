@@ -31,3 +31,6 @@ cv2.imwrite("temp/b_scaled.png", b_scaled)
 b_restored = cv2.resize(b_scaled,b.shape[::-1], interpolation=cv2.INTER_LINEAR)
 
 cv2.imwrite("temp/b_restored.png", b_restored)
+
+b_restored = cv2.resize(b_scaled,b.shape[::-1], interpolation=cv2.INTER_NEAREST)
+cv2.imwrite("temp/b_rescaleup.png", b_restored)
